@@ -3,3 +3,31 @@
     padding: 0;
     background-color: black;
 }
+
+#firstInspiration {
+    height: 10em;
+    width: 50em;
+    position: absolute;
+    top: 10em;
+    left: 15px;
+}
+
+#secondInsiration {
+    height: 10em;
+    width: 50em;
+    position: absolute;
+    top: 21em;
+    left: 15px;
+}
+
+#thirdInspiration {
+    height: 10em;
+    width: 50em;
+    position: absolute;
+    top: 32em;
+    left: 15px;
+}
+
+p {
+    color: white;
+}
