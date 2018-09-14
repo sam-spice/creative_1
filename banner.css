@@ -1,9 +1,3 @@
-.web-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-}
-
 /*Navigation bar part*/
 .nav-text {
     color: darkgray;
@@ -120,7 +114,7 @@
 ul.subNav a {
     padding-left: 8px;
     padding-right: 8px;
-    /*display: block;*/                                                                   /*this line was causing the subnav to sometimes appears as bigger rectangles than they should have*/
+    display: block;                                                                 /*this line was causing the subnav to sometimes appears as bigger rectangles than they should have*/
     color: inherit;
 }
 
