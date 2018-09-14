@@ -1,0 +1,195 @@
+.web-body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*Navigation bar part*/
+.nav-text {
+    color: darkgray;
+}
+
+.nav-text-alt {
+    color: #424242;
+}
+
+.nav-background-color {
+    background: #333333;
+}
+
+.nav-background-color-alt {
+    background: #dbdbdb;
+}
+
+.main-border-color {
+    border-bottom: 1px solid #6b6b6b;
+}
+
+.main-border-color-alt {
+    border-bottom: 1px solid #918f8f;
+}
+
+.sub-nav-background-color {
+    background: #333333;
+}
+
+.sub-nav-background-color-alt {
+    background: #dbdbdb;
+}
+
+.sub-border-color {
+    border: 1px solid;
+    border-width: 0 1px 1px 1px;
+    border-color: #6b6b6b;
+}
+
+.sub-border-color-alt {
+    border: 1px solid;
+    border-width: 0 1px 1px 1px;
+    border-color: #918f8f;
+}
+
+/*set navigation bar's height and make it transparent*/
+#navBar {
+    height: 55px;
+    line-height: 55px;
+    /*background: rgba(1,1,1,0.5);*/
+    z-index: 2;
+}
+
+#navBar nav {
+    height: inherit;
+}
+
+/*set font size for all links within the navigation bar*/
+#navBar nav a {
+    font-family: 'Times New Roman';
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*set style for the menu*/
+#navMenu {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    position: relative;
+    z-index: 3;
+    height: inherit;
+    list-style: none;
+}
+
+/*create side by side menu*/
+#navMenu li {
+    display: inline-block;
+    text-align: left;
+    padding: 0;
+    border: 1px solid transparent;
+    border-width: 0 1px 0 1px;
+    position: relative;
+}
+
+/*set padding for main navigation items*/
+#navMenu li span {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: block;
+}
+
+/*set padding for MiscObsurdity (because it is a standalone link)*/
+#navMenu li span a {
+    padding-left: 8px;
+    padding-right: 8px;
+    display: block;
+}
+/*set position and border color of subitems*/
+.subNav {
+    padding: 0px;
+    display: none;
+    position: absolute;
+    top: 55px;
+    width: 200px;
+    height: inherit;
+    /*border: 1px solid; /*black;*/
+    left: -1px;                                                                        /*if change to transparent then probably delete this line*/
+    /*border-width: 0 1px 1px 1px;*/                                                        /*change 0 to 1px ?*/
+    /*overflow: hidden;*/                                                                                    /*ADD TO CHANGE SUBMENU????*/
+}
+
+/*change position of text and color of text within the subnavigation*/
+ul.subNav a {
+    padding-left: 8px;
+    padding-right: 8px;
+    /*display: block;*/                                                                   /*this line was causing the subnav to sometimes appears as bigger rectangles than they should have*/
+    color: inherit;
+}
+
+/*change the display of the subnavigation items to fit the .subnav class*/
+ul.subNav li {
+    display: block;
+    padding-top: 0;
+    height: inherit;
+    width: inherit;
+    list-style: none;
+}
+
+/*change color of menu item selected*/
+#navMenu li:hover {
+    border-color: transparent;                                                        /*change main list to transparent? or #6b6b6b*/
+}
+
+/*display the submenu when hovering over it's corresponding navigation item*/
+#navMenu li:hover ul {
+    display: block;
+    list-style: none;
+}
+
+/*change main navigation item to white*/
+#navMenu li:hover span {
+    color: white;
+    /*add background color when hovering over main navigation here*/
+}
+
+/*See above. For MiscObsurdity*/
+#navMenu li:hover span a {
+    color: white;
+}
+
+/*change CSS arrow color*/
+#navMenu li:hover span i {
+    border-top: 5px solid white;
+}
+
+/*set color of background for subitems when selected*/
+#navMenu li ul li:hover {
+    background-color: #242526;
+    /*transparent so it doesn't add to the existing border.*/
+    border-left-color: transparent;
+    border-right-color: #6b6b6b;
+    list-style: none;
+}
+
+/*set color of subnavigation links when selected*/
+#navMenu li ul li:hover a {
+   color: white;
+}
+
+/*create a CSS triangle*/
+.arrowDown {
+    width: 0;
+    height: 3px;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid darkgray;
+}
+
+/*create alt CSS triangle*/
+.arrowDown-alt {
+    width: 0;
+    height: 3px;
+    display: inline-block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #424242;
+}
