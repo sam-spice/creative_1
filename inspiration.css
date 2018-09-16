@@ -9,27 +9,24 @@
     padding: 15px;
 }
 
-#firstInspiration {
-    height: 10em;
-    width: 35em;
+.for-animate {
+    height: 250px;
+    width: 400px;
     position: absolute;
-    top: 25em;
-    left: 44em;
     border: 1px solid green;
 }
 
+#firstInspiration {
+    top: 23em;
+    left: 44em;
+}
+
 #secondInsiration {
-    height: 10em;
-    width: 35em;
-    position: absolute;
     top: 40em;
     right: 15em;
 }
 
 #thirdInspiration {
-    height: 10em;
-    width: 35em;
-    position: absolute;
     top: 40em;
     left: 15em;
 }
