@@ -5,15 +5,15 @@
 }
 
 .inspiration-text {
-    margin: 0;
-    padding: 15px;
+    margin: 15px;
+    padding: 0;
+    position: absolute;
 }
 
-.for-animate {
-    height: 250px;
-    width: 400px;
+.position-animated-div {
+    height: 150px;
+    width: 550px;
     position: absolute;
-    border: 1px solid green;
 }
 
 #firstInspiration {
@@ -33,6 +33,7 @@
 
 p {
     color: white;
+    position: absolute;
 }
 
 #inspiration-heading {
@@ -43,4 +44,25 @@ p {
     font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
     color: #fff;
     text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.zoom {
+    padding: 0px;
+    margin: 0px;
+    /*background-color: green;*/
+    transition: transform .2s;
+    height: 150px;
+    width: 550px;
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
 }

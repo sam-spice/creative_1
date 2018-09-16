@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="banner.css" />
         <link rel="stylesheet" href="inspiration.css" />
         <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
  <body class="web-body">
      <div id="navBar" class="nav-background-color">
@@ -24,50 +23,34 @@
         </nav>
     </div>
     <h2 id="inspiration-heading">Inspiration</h2>
-    <div id="firstInspiration" class="for-animate">
+    <div id="firstInspiration" class="position-animated-div">
+        <div class="zoom">
         <p class="inspiration-text">
             A dream. Imagine a forest, light pouring through the beautiful boughs of the great, ancient trees surrounding you. Lush, green overgrowth covering the forest floor which itself is teeming with the 
             most wondrous creatures. It was there, pondering on a sturdy rock next to a babbling brook, that an incredible idea formed. This is not that idea. And the rest is history.
         </p>
+        </div>
     </div>
     
-    <div id="secondInsiration" class="for-animate">
+    <div id="secondInsiration" class="position-animated-div">
+        <div class="zoom">
          <p class="inspiration-text">
              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
              in culpa qui officia deserunt mollit anim id est laborum.
          </p>
+         </div>
     </div>
     
-    <div id="thirdInspiration" class="for-animate">
+    <div id="thirdInspiration" class="position-animated-div">
+        <div class="zoom">
         <p class="inspiration-text">
              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
              in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        </div>
     </div>
     
  </body>
- <script type="text/javascript">
-           $(".for-animate")
-           .on('mouseenter', function(){
-        var div = $(this);
-        div.stop(true, true).animate({ 
-            margin: -10,
-            width: "+=20",
-            height: "+=20"
-        }, 'fast');
-    })
-    .on('mouseleave', function(){
-        var div = $(this);
-        div.stop(true, true).animate({ 
-            margin: 0,
-            width: "-=20",
-            height: "-=20"
-        }, 'fast');
-    })
-        </script>
-        
- 
- 
 </html>
