@@ -1,5 +1,64 @@
 .web-body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: gray;
 }
+
+#button-holder {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 150px;
+    width: 750px;
+    left: 30%;
+    top: 40%;
+    font-size: 20px;
+    z-index: 3;
+}
+/*
+.cure-boredom-button {
+    height:150px;
+    width:750px;
+    font-size: 70px;
+    background-color: #636363;
+    border: 1px solid green;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 5;
+}
+*/
+.cure-boredom-button {
+	position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: rgba(219,87,5,1);
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 700;
+    font-size: 3em;
+    display: block;
+    padding: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    margin: 0;
+	width: 750px;
+	text-align: center;
+	border: none;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+.cure-boredom-button:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+}
+
+button:focus {outline:0;}
