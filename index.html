@@ -23,7 +23,18 @@
         </nav>
     </div>
     <div id="button-holder">
-        <button class="cure-boredom-button" type="button">CURE MY BOREDOM</button>
+        <button class="cure-boredom-button" type="button" onclick="getVideo()">CURE MY BOREDOM</button>
     </div>
  </body>
+ <script type="text/javascript">
+     var videos = ["https://www.youtube.com/watch?v=wpVTORX_ifk&t=7s", "https://www.youtube.com/watch?v=fXtEJZZZNI0", "https://www.youtube.com/watch?v=DPmsQehrXCg",
+     "https://www.youtube.com/watch?v=tWixil5yFPw", "https://www.youtube.com/watch?v=3uKAspm87C8"];
+ </script>
+  <script type="text/javascript">
+    function getVideo() {
+        var item = videos[Math.floor(Math.random()*videos.length)];
+        window.open(item);
+    }
+    
+  </script>
 </html>
