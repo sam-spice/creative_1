@@ -4,30 +4,46 @@
     background-color: black;
 }
 
+.inspiration-text {
+    margin: 0;
+    padding: 15px;
+}
+
 #firstInspiration {
     height: 10em;
-    width: 50em;
+    width: 35em;
     position: absolute;
-    top: 10em;
-    left: 15px;
+    top: 25em;
+    left: 44em;
+    border: 1px solid green;
 }
 
 #secondInsiration {
     height: 10em;
-    width: 50em;
+    width: 35em;
     position: absolute;
-    top: 21em;
-    left: 15px;
+    top: 40em;
+    right: 15em;
 }
 
 #thirdInspiration {
     height: 10em;
-    width: 50em;
+    width: 35em;
     position: absolute;
-    top: 32em;
-    left: 15px;
+    top: 40em;
+    left: 15em;
 }
 
 p {
     color: white;
+}
+
+#inspiration-heading {
+    position: absolute;
+    margin: 0;
+    left: 5.5em;
+    top: 1em;
+    font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
