@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="banner.css" />
         <link rel="stylesheet" href="main.css" />
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
@@ -25,6 +30,33 @@
     <div id="button-holder">
         <button class="cure-boredom-button" type="button" onclick="getVideo()">CURE MY BOREDOM</button>
     </div>
+    
+    <div id="comments" class="comment-holder">
+    </div>
+    
+    <template id="comment-template">
+        <div class="review-box">
+            <div class="reviews">
+              <div class="row blockquote review-item">
+                <div class="col-md-3 text-center">
+                  <img class="rounded-circle reviewer" src="http://standaloneinstaller.com/upload/avatar.png">
+                  <div class="caption">
+                    <small class='review-author'>by </small>
+                  </div>
+            
+                </div>
+                <div class="col-md-9">
+                  <h4 class="review-title">My awesome review</h4>
+                  <div class="ratebox text-center" data-id="0" data-rating="5"></div>
+                  <p class="review-body"></p>
+            
+                  <small class="review-date">March 26, 2017</small>
+                </div>                          
+              </div>  
+            </div>
+        </div>
+    </template>
+    
  </body>
  <script type="text/javascript">
      var videos = ["https://www.youtube.com/watch?v=wpVTORX_ifk&t=7s", "https://www.youtube.com/watch?v=fXtEJZZZNI0", "https://www.youtube.com/watch?v=DPmsQehrXCg",
@@ -36,5 +68,28 @@
         window.open(item);
     }
     
+  </script>
+  
+  <script>
+      // An array of comments.
+        var comments = [
+          {'author': 'Joe', 'body': 'I love this product.', 'date':"May 15, 2018", 'title':"Title"},
+          {'author': 'Mary', 'body': 'Great idea. I have got to get me one of these!', 'date':"August 26, 2018", 'title':"Title"},
+          {'author': 'Eric', 'body': 'These things are fantastic. I bought three.', 'date':"September 3, 2018", 'title':"Title"}
+        ];
+        
+        // Get a reference to the comments list in the main DOM.
+        var commentsList = document.getElementById('comments');
+        
+        // Loop through each of the comments and add them to the comments list.
+        for (var i = 0; i < comments.length; i++) {
+          var comment = comments[i];
+          var tmpl = document.getElementById('comment-template').content.cloneNode(true);
+          tmpl.querySelector('.review-author').innerText += comment.author;
+          tmpl.querySelector('.review-body').innerText = comment.body;
+          tmpl.querySelector('.review-date').innerText = comment.date;
+          tmpl.querySelector('.review-title').innerText = comment.title;
+          commentsList.appendChild(tmpl);
+        }
   </script>
 </html>

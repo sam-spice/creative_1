@@ -5,15 +5,15 @@
 }
 
 #button-holder {
-    position: absolute;
+    position: relative;
     margin: 0;
-    padding: 0;
-    height: 150px;
-    width: 750px;
-    left: 30%;
+    height: 300px;
     top: 40%;
     font-size: 20px;
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*
 .cure-boredom-button {
@@ -62,3 +62,23 @@
 }
 
 button:focus {outline:0;}
+
+.comment-holder {
+}
+
+.review-box {
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 2px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+}
+
+.comment-author {
+    padding-left: 1em;
+}
+
+.comment-body {
+    padding-left: 2.5em;
+}
+
