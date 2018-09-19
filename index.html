@@ -33,6 +33,24 @@
     
     <div id="comments" class="comment-holder">
     </div>
+    <div>
+        <h2 id="review-submission-header">Submit your own review</h2>
+    </div>
+    <form id="review_form">
+        <ul id="fieldList">
+            
+            <li>
+                <input name="name" type="text" placeholder="Name" />
+            </li>
+            <li>
+                <input name="title" type="text" placeholder="Review Title" />
+            </li>
+            <br>
+            <textarea name="review" rows="4" cols="50" placeholder="Your Review Text"/></textarea>
+            <br>
+            <input type="button" value="Submit" id="btnsubmit" onclick="submit_review()">
+        </ul>
+    </form>
     
     <template id="comment-template">
         <div class="review-box">
@@ -61,35 +79,46 @@
  <script type="text/javascript">
      var videos = ["https://www.youtube.com/watch?v=wpVTORX_ifk&t=7s", "https://www.youtube.com/watch?v=fXtEJZZZNI0", "https://www.youtube.com/watch?v=DPmsQehrXCg",
      "https://www.youtube.com/watch?v=tWixil5yFPw", "https://www.youtube.com/watch?v=3uKAspm87C8"];
- </script>
-  <script type="text/javascript">
+    
+    var existing_comments= [
+      {'author': 'Joe', 'body': 'I used to be bored and cripplingly depressed. Now I am only depressed!', 'date':"Tue Feb 20 2018", 'title':"Cured 1 of My Ailments!"},
+      {'author': 'Mary', 'body': 'I was bored now I am slightly less bored! 5/7 would recommend!', 'date':"Wed May 16 2018", 'title':"Most Mediocre Site Ever!"},
+      {'author': 'Eric', 'body': 'Of all of the sites on the internet this is definitely in my top 1 million!', 'date':"Fri Aug 17 2018", 'title':"Pretty Decent!"}
+    ];
+    
+    // Get a reference to the comments list in the main DOM.
+    var commentsList = document.getElementById('comments');
+    
     function getVideo() {
         var item = videos[Math.floor(Math.random()*videos.length)];
         window.open(item);
     }
     
-  </script>
-  
-  <script>
-      // An array of comments.
-        var comments = [
-          {'author': 'Joe', 'body': 'I love this product.', 'date':"May 15, 2018", 'title':"Title"},
-          {'author': 'Mary', 'body': 'Great idea. I have got to get me one of these!', 'date':"August 26, 2018", 'title':"Title"},
-          {'author': 'Eric', 'body': 'These things are fantastic. I bought three.', 'date':"September 3, 2018", 'title':"Title"}
-        ];
-        
-        // Get a reference to the comments list in the main DOM.
-        var commentsList = document.getElementById('comments');
-        
-        // Loop through each of the comments and add them to the comments list.
-        for (var i = 0; i < comments.length; i++) {
-          var comment = comments[i];
-          var tmpl = document.getElementById('comment-template').content.cloneNode(true);
-          tmpl.querySelector('.review-author').innerText += comment.author;
-          tmpl.querySelector('.review-body').innerText = comment.body;
-          tmpl.querySelector('.review-date').innerText = comment.date;
-          tmpl.querySelector('.review-title').innerText = comment.title;
-          commentsList.appendChild(tmpl);
-        }
+    function create_review(author, body, date, title){
+        var tmpl = document.getElementById('comment-template').content.cloneNode(true);
+        tmpl.querySelector('.review-author').innerText += author;
+        tmpl.querySelector('.review-body').innerText = body;
+        tmpl.querySelector('.review-date').innerText = date;
+        tmpl.querySelector('.review-title').innerText = title;
+        commentsList.appendChild(tmpl);
+    }
+    
+    function submit_review(){
+        var form = document.forms["review_form"]
+        var author = document.forms["review_form"]["name"].value;
+        var title = document.forms["review_form"]["title"].value;
+        var review_body = document.forms["review_form"]["review"].value;
+        var date = new Date().toDateString();
+        form.reset()
+        create_review(author, review_body, date, title)
+    }
+    
+    // Loop through each of the comments and add them to the comments list.
+    
+    for (var i = 0; i < existing_comments.length; i++) {
+        var comment = existing_comments[i];
+        create_review(comment.author, comment.body, comment.date, comment.title)
+    }
+    
   </script>
 </html>

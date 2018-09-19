@@ -82,3 +82,11 @@ button:focus {outline:0;}
     padding-left: 2.5em;
 }
 
+#fieldList li{
+    display: inline;
+}
+
+#review-submission-header {
+    border-bottom:solid;
+}
+
