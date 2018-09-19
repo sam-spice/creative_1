@@ -134,7 +134,7 @@ ul.subNav li {
 
 /*display the submenu when hovering over it's corresponding navigation item*/
 #navMenu li:hover ul {
-    display: block;
+    display: block; 
     list-style: none;
 }
 
